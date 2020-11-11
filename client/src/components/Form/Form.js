@@ -38,7 +38,7 @@ const Form = ({ currentId, setCurrentId }) => {
             title: '',
             message: '',
             tags: '',
-            slectedFile: ''
+            selectedFile: ''
         })
     }
     return (
