@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
 import { Button, Paper, TextField, Typography } from '@material-ui/core';
-import FileBase from 'react-file-base64'
-import { useDispatch, useSelector } from 'react-redux'
-import useStyles from './styles';
+import React, { useEffect, useState } from 'react';
+import FileBase from 'react-file-base64';
+import { useDispatch, useSelector } from 'react-redux';
 import { createPost, updatePost } from '../../actions/posts';
+import useStyles from './styles';
 
 const Form = ({ currentId, setCurrentId }) => {
     const [postData, setPostData] = useState({
@@ -80,7 +80,7 @@ const Form = ({ currentId, setCurrentId }) => {
                         fullWidth
                         value={postData.tags}
                         onChange={
-                            (e) => setPostData({ ...postData, tags: e.target.value })}
+                            (e) => setPostData({ ...postData, tags: e.target.value.split(',') })}
                     />
                     {/* <div className={classes.fileInput}>
                         <FileBase
